@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #121212;
+}
+
+#game-canvas {
+  display: block;
+  background-color: #1a1a1a;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #222f3e;
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  border: 1px solid #341f97;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  color: #c8d6e5;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 2px solid #576574;
+  background: #10ac84;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  background: #2e3d49;
+  outline: none;
+}
+
+.modal-content button {
+  width: 100%;
+  padding: 12px;
+  background: #10ac84;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.modal-content button:hover {
+  background: #1dd1a1;
+}
+
+.controls-hint {
+  font-size: 12px !important;
+  margin-top: 15px;
+  color: #8395a7 !important;
+}
+
+#hud {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+#leaderboard {
+  background: rgba(34, 47, 62, 0.85);
+  border: 1px solid #576574;
+  border-radius: 8px;
+  padding: 12px 18px;
+  color: #fff;
+  min-width: 220px;
+}
+
+#leaderboard h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: #feca57;
+  border-bottom: 1px solid #576574;
+  padding-bottom: 4px;
+}
+
+#leaderboard-list {
+  padding-left: 20px;
+  font-size: 13px;
+}
+
+#leaderboard-list li {
+  margin-bottom: 4px;
+}
+
+#kill-feed {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.kill-msg {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  border-left: 3px solid #ff6b6b;
+  animation: fadeOut 4s forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "tank-battle-2d",
+  "version": "1.0.0",
+  "description": "Batalla de tanques 2D multijugador en tiempo real",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  }
+}

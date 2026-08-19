@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Batalla de Tanques 2D</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+
+  <!-- Pantalla de Login / Lobby -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <h2>Batalla de Tanques 2D</h2>
+      <p>Arena multijugador para hasta 20 combatientes</p>
+      <input type="text" id="player-name" placeholder="Ingresa tu nombre..." maxlength="15" autofocus>
+      <button id="btn-join">Entrar al Combate</button>
+      <p class="controls-hint">Controles: <b>W/A/S/D</b> para mover y girar | <b>Mouse</b> para apuntar | <b>Clic</b> para disparar</p>
+    </div>
+  </div>
+
+  <!-- Pantalla de Muerte / Reaparición -->
+  <div id="death-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2 style="color: #e74c3c;">¡Has sido destruido!</h2>
+      <p id="death-info"></p>
+      <button id="btn-respawn">Reaparecer</button>
+    </div>
+  </div>
+
+  <!-- HUD superior: Ranking en vivo y Estadísticas -->
+  <div id="hud">
+    <div id="leaderboard">
+      <h3>Ranking de Bajas</h3>
+      <ol id="leaderboard-list"></ol>
+    </div>
+    <div id="kill-feed"></div>
+  </div>
+
+  <canvas id="game-canvas"></canvas>
+
+  <script src="game.js"></script>
+</body>
+</html>

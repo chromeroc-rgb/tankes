@@ -1,0 +1,8 @@
+tank-battle-2d/
+│
+├── package.json
+├── server.js
+└── public/
+    ├── index.html
+    ├── style.css
+    └── game.js
